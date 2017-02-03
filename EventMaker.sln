@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventMaker", "EventMaker\EventMaker.csproj", "{227049D8-9D88-4B49-883B-DBAB6EFFC465}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject1", "ModelingProject1\ModelingProject1.modelproj", "{C90CFB4B-CAC8-4D7E-8556-02515661C40F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Debug|ARM.ActiveCfg = Debug|ARM
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Debug|ARM.Build.0 = Debug|ARM
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Debug|ARM.Deploy.0 = Debug|ARM
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Debug|x64.ActiveCfg = Debug|x64
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Debug|x64.Build.0 = Debug|x64
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Debug|x64.Deploy.0 = Debug|x64
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Debug|x86.ActiveCfg = Debug|x86
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Debug|x86.Build.0 = Debug|x86
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Debug|x86.Deploy.0 = Debug|x86
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Release|Any CPU.ActiveCfg = Release|x86
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Release|ARM.ActiveCfg = Release|ARM
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Release|ARM.Build.0 = Release|ARM
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Release|ARM.Deploy.0 = Release|ARM
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Release|x64.ActiveCfg = Release|x64
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Release|x64.Build.0 = Release|x64
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Release|x64.Deploy.0 = Release|x64
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Release|x86.ActiveCfg = Release|x86
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Release|x86.Build.0 = Release|x86
+		{227049D8-9D88-4B49-883B-DBAB6EFFC465}.Release|x86.Deploy.0 = Release|x86
+		{C90CFB4B-CAC8-4D7E-8556-02515661C40F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C90CFB4B-CAC8-4D7E-8556-02515661C40F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C90CFB4B-CAC8-4D7E-8556-02515661C40F}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{C90CFB4B-CAC8-4D7E-8556-02515661C40F}.Debug|ARM.Build.0 = Debug|Any CPU
+		{C90CFB4B-CAC8-4D7E-8556-02515661C40F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C90CFB4B-CAC8-4D7E-8556-02515661C40F}.Debug|x64.Build.0 = Debug|Any CPU
+		{C90CFB4B-CAC8-4D7E-8556-02515661C40F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C90CFB4B-CAC8-4D7E-8556-02515661C40F}.Debug|x86.Build.0 = Debug|Any CPU
+		{C90CFB4B-CAC8-4D7E-8556-02515661C40F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C90CFB4B-CAC8-4D7E-8556-02515661C40F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C90CFB4B-CAC8-4D7E-8556-02515661C40F}.Release|ARM.ActiveCfg = Release|Any CPU
+		{C90CFB4B-CAC8-4D7E-8556-02515661C40F}.Release|ARM.Build.0 = Release|Any CPU
+		{C90CFB4B-CAC8-4D7E-8556-02515661C40F}.Release|x64.ActiveCfg = Release|Any CPU
+		{C90CFB4B-CAC8-4D7E-8556-02515661C40F}.Release|x64.Build.0 = Release|Any CPU
+		{C90CFB4B-CAC8-4D7E-8556-02515661C40F}.Release|x86.ActiveCfg = Release|Any CPU
+		{C90CFB4B-CAC8-4D7E-8556-02515661C40F}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
