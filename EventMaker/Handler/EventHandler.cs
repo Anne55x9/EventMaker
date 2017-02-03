@@ -10,6 +10,7 @@ namespace EventMaker.Handler
     class EventHandler 
 
     {
+
         public EventViewModel refEventViewModel { get; set; }
 
         public EventHandler(EventViewModel Evm)
