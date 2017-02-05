@@ -8,7 +8,7 @@ using EventMaker;
 
 namespace EventMaker.Model
 {
-    class Event
+   public class Event
     {
       public  int Id;
        public string Names;

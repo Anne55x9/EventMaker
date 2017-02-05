@@ -9,7 +9,7 @@ using EventMaker.Handler;
 using System.ComponentModel;
 namespace EventMaker.Viewmodel
 {
-    class EventViewModel: INotifyPropertyChanged
+   public class EventViewModel: INotifyPropertyChanged
     {
         public EventCatalogSingleton Singleton { get; set; }
 
