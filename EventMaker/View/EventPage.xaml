@@ -12,7 +12,9 @@
         <Grid.DataContext>
             <Viewmodel:EventViewModel/>
         </Grid.DataContext>
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="700" Margin="95,180,0,0" VerticalAlignment="Top" Width="380" ItemsSource="{Binding SelectedItem}"/>
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="700" Margin="95,180,0,0" VerticalAlignment="Top" Width="380"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="95,105,0,0" TextWrapping="Wrap" Text="{Binding SelectedEvent}" VerticalAlignment="Top" Height="35" Width="135"/>
+        <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Height="55" Icon="Accept" Label="&#xD;&#xA;" Margin="270,91,0,0" VerticalAlignment="Top" Width="140" Command="{Binding DeleteEventCommand}"/>
 
     </Grid>
 </Page>

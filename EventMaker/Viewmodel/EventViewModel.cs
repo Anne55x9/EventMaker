@@ -42,11 +42,28 @@ namespace EventMaker.Viewmodel
                 TimeSpan());
             TimeSpan _time = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
             CreateEventCommand = new Relaycommand(eventHandler.CreateEvent, null);
-            DeleteEventCommand = new Relaycommand(eventHandler.RemoveEvent, null);
+            DeleteEventCommand = new Relaycommand(eventHandler.RemoveEvent, EmptyCheck);
+        }
+        
+        public bool EmptyCheck()
+        {
+            if (EventCatalogSingleton.Instance.ObservableCollectionEvent.Count() == 0)
+            {
+                return false;
+            }
+            
+            else
+
+            {
+                return true;
+            }
+
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
         protected virtual void OnPropertyChanged(string propertyName)
+
         {
             if (PropertyChanged != null)
             {
