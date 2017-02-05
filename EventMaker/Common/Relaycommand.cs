@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using EventMaker.Model;
 using Windows.UI.Xaml;
 
 
@@ -16,9 +17,10 @@ namespace EventMaker.Common
             private Func<bool>
                 methodToDetectCanExecute = null;
             private DispatcherTimer canExecuteChangedEventTimer = null;
+        private Action<Event> removeEvent;
+        private object p;
 
-
-            public event EventHandler CanExecuteChanged;
+        public event EventHandler CanExecuteChanged;
 
             void canExecuteChangedEventTimer_Tick(object sender, object e)
             {
@@ -42,7 +44,8 @@ namespace EventMaker.Common
 
             }
 
-            public bool CanExecute(object parameter)
+ 
+        public bool CanExecute(object parameter)
             {
                 if (this.methodToDetectCanExecute == null)
                 {

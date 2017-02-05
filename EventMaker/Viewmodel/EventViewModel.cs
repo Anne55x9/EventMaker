@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 using EventMaker.Model;
 using EventMaker.Common;
 using EventMaker.Handler;
+using System.ComponentModel;
 namespace EventMaker.Viewmodel
 {
-    class EventViewModel
+    class EventViewModel: INotifyPropertyChanged
     {
         public EventCatalogSingleton Singleton { get; set; }
 
@@ -19,6 +20,19 @@ namespace EventMaker.Viewmodel
         public DateTimeOffset Date { get; set; }
         public TimeSpan Time { get; set; }
         public Relaycommand CreateEventCommand { get; set; }
+        public Relaycommand DeleteEventCommand { get; set; }
+        private Model.Event selectedEvent;
+
+        public Event SelectedEvent
+        {
+            get { return selectedEvent; }
+            set
+            {
+                selectedEvent = value;
+                OnPropertyChanged(nameof(SelectedEvent));
+            }
+        }
+
         private EventMaker.Handler.EventHandler eventHandler { get; set; }
 
         public EventViewModel()
@@ -28,7 +42,17 @@ namespace EventMaker.Viewmodel
                 TimeSpan());
             TimeSpan _time = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
             CreateEventCommand = new Relaycommand(eventHandler.CreateEvent, null);
-
+            DeleteEventCommand = new Relaycommand(eventHandler.RemoveEvent, null);
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
     }
 }

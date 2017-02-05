@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using EventMaker.Viewmodel;
 using EventMaker.Converter;
+using EventMaker.Model;
+
 namespace EventMaker.Handler
 {
     class EventHandler 
@@ -12,6 +14,7 @@ namespace EventMaker.Handler
     {
 
         public EventViewModel refEventViewModel { get; set; }
+        public EventCatalogSingleton refEventCatalogSingleton { get; set; }
 
         public EventHandler(EventViewModel Evm)
         {
@@ -27,6 +30,12 @@ namespace EventMaker.Handler
                 refEventViewModel.Descripition, refEventViewModel.Place,
                 DateTimeConverter.DateTimeOffsetAndTimeSetToDateTime
                 (refEventViewModel.Date, refEventViewModel.Time)));
+        }
+        public Event EV { get; set; }
+        public void RemoveEvent()
+        {
+          
+        refEventCatalogSingleton.RemoveEvent(EV);
         }
     }
 }

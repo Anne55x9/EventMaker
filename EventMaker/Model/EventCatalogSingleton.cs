@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace EventMaker.Model
 {
-    class EventCatalogSingleton
+   public class EventCatalogSingleton
     {
         
         private static EventCatalogSingleton instance;
@@ -27,6 +27,12 @@ namespace EventMaker.Model
             ObservableCollectionEvent.Add(EV);
             Persistency.PersistencyService.SaveEventAsJsonAsync(ObservableCollectionEvent);
         }
+
+      public void RemoveEvent(Event EV)
+        {
+            ObservableCollectionEvent.Remove(EV);
+        }
+
 
         public ObservableCollection<Event> ObservableCollectionEvent { get; set; }
         public static EventCatalogSingleton Instance
