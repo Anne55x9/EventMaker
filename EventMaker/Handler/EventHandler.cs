@@ -20,7 +20,7 @@ namespace EventMaker.Handler
 
         }
 
-        private void CreateEvent()
+     public void CreateEvent()
         {
             refEventViewModel.Singleton.ObservableCollectionEvent.Add
                 (new Model.Event(refEventViewModel.Id, refEventViewModel.Name,

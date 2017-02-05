@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EventMaker.Model;
-
+using EventMaker.Common;
+using EventMaker.Handler;
 namespace EventMaker.Viewmodel
 {
     class EventViewModel
@@ -17,13 +18,17 @@ namespace EventMaker.Viewmodel
         public string Place { get; set; }
         public DateTimeOffset Date { get; set; }
         public TimeSpan Time { get; set; }
+        public Relaycommand CreateEventCommand { get; set; }
+        private EventMaker.Handler.EventHandler eventHandler { get; set; }
+
         public EventViewModel()
         {
             DateTime dt = System.DateTime.Now;
             DateTimeOffset _date = new DateTimeOffset(dt.Year, dt.Month, dt.Day, 0, 0, 0, 0, new
                 TimeSpan());
             TimeSpan _time = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
+            CreateEventCommand = new Relaycommand(eventHandler.CreateEvent, null);
 
         }
-    }   
+    }
 }
