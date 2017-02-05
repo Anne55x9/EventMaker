@@ -41,7 +41,7 @@ namespace EventMaker.Persistency
             await FileIO.WriteTextAsync(file, eventsString);
         }
 
-        private static async Task<string> DeSerializeEventsFileAsync(string filenavnTilføjEvents)
+        //private static async Task<string> DeSerializeEventsFileAsync(string filenavnTilføjEvents)
         {
         }
 
