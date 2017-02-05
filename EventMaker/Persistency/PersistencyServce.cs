@@ -12,7 +12,7 @@ namespace EventMaker.Persistency
 {
     class PersistencyService
     {
-        StorageFolder localfolder = null;
+        static StorageFolder localfolder = null;
         static private readonly string filnavnTilføjEvents = "Events.json";
 
         public PersistencyService()
@@ -32,7 +32,8 @@ namespace EventMaker.Persistency
             Task<string> jsonTaskText = DeSerializeEventsFileAsync(filnavnTilføjEvents);
 
             List<Event> newList = JsonConvert.DeserializeObject<List<Event>>(jsonTaskText.ToString());
-               
+
+            return newList;
         }
 
         private static async void SerializeEventsFileAsync(string eventsString, string filenavnTilføjEvents)
@@ -41,8 +42,12 @@ namespace EventMaker.Persistency
             await FileIO.WriteTextAsync(file, eventsString);
         }
 
-        //private static async Task<string> DeSerializeEventsFileAsync(string filenavnTilføjEvents)
+        private static async Task<string> DeSerializeEventsFileAsync(string filenavnTilføjEvents)
         {
+            StorageFile file = await localfolder.GetFileAsync(filenavnTilføjEvents);
+            string jsonText = await FileIO.ReadTextAsync(file);
+
+            return jsonText;
         }
 
 

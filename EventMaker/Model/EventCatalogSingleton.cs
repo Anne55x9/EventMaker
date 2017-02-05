@@ -25,6 +25,7 @@ namespace EventMaker.Model
         private void AddEvent(Event EV)
         {
             ObservableCollectionEvent.Add(EV);
+            Persistency.PersistencyService.SaveEventAsJsonAsync(ObservableCollectionEvent);
         }
 
         public ObservableCollection<Event> ObservableCollectionEvent { get; set; }
