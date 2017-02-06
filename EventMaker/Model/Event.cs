@@ -29,7 +29,7 @@ namespace EventMaker.Model
 
         public override string ToString()
         {
-            return $"ID = {Id}, NAME = {Names}, DESCRIPTION = {Description}, PLACE = {Place}, DateTime = {DateTime}";
+           return $"ID = {Id}, NAME = {Names}, DESCRIPTION = {Description}, PLACE = {Place}, DateTime = {DateTime}";
         }
 
 
