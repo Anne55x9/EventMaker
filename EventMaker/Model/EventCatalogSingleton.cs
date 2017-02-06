@@ -28,9 +28,9 @@ namespace EventMaker.Model
             Persistency.PersistencyService.SaveEventAsJsonAsync(ObservableCollectionEvent);
         }
 
-      public void RemoveEvent(Event EV)
+      public void RemoveEvent(Event SelectedEvent)
         {
-            ObservableCollectionEvent.Remove(EV);
+            ObservableCollectionEvent.Remove(SelectedEvent);
         }
 
 

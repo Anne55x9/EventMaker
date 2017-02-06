@@ -12,7 +12,8 @@
         <Viewmodel:EventViewModel/>
     </Page.DataContext>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,-4,0,4">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="10,10,0,4">
 
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="45,39,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="350" Height="50" Foreground="Black"/>
         <TimePicker HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,286,0,0" Time="{Binding Time}"/>
@@ -20,10 +21,10 @@
         <TextBlock x:Name="textBlock_Copy" Margin="45,94,0,0" TextWrapping="Wrap" Text="{Binding Id}" VerticalAlignment="Top" Height="50" HorizontalAlignment="Left" Width="350"/>
         <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="45,149,0,0" TextWrapping="Wrap" Text="{Binding Descripition}" VerticalAlignment="Top" Width="350" Height="50"/>
         <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="45,204,0,0" TextWrapping="Wrap" Text="{Binding Place}" VerticalAlignment="Top" Width="350" Height="48" Foreground="#FF131313"/>
-        <AppBarButton x:Name="appBarButton" Height="55" Icon="Accept" Label="appbarbutton" Margin="45,389,0,0" Width="115">
+        <AppBarButton x:Name="appBarButton" Height="55" Icon="Accept" Label="appbarbutton" Margin="45,389,0,0" Width="115" Command="{Binding CreateEventCommand}">
             <Interactivity:Interaction.Behaviors>
                 <Core:EventTriggerBehavior EventName="Click">
-                    <Core:NavigateToPageAction TargetPage="EventMaker.View.CreateEventPage"/>
+                    <Core:NavigateToPageAction TargetPage="EventMaker.View.EventPage"/>
                 </Core:EventTriggerBehavior>
             </Interactivity:Interaction.Behaviors>
         </AppBarButton>

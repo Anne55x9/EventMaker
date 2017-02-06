@@ -31,11 +31,11 @@ namespace EventMaker.Handler
                 DateTimeConverter.DateTimeOffsetAndTimeSetToDateTime
                 (refEventViewModel.Date, refEventViewModel.Time)));
         }
-        public Event EV { get; set; }
+   
         public void RemoveEvent()
         {
           
-        refEventCatalogSingleton.RemoveEvent(EV);
+        refEventCatalogSingleton.RemoveEvent(refEventViewModel.selectedEvent);
         }
     }
 }

@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Viewmodel="using:EventMaker.Viewmodel"
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
     x:Class="EventMaker.View.EventPage"
     mc:Ignorable="d">
 
@@ -14,7 +15,8 @@
         </Grid.DataContext>
         <ListView x:Name="listView" HorizontalAlignment="Left" Height="700" Margin="95,180,0,0" VerticalAlignment="Top" Width="380"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="95,105,0,0" TextWrapping="Wrap" Text="{Binding SelectedEvent}" VerticalAlignment="Top" Height="35" Width="135"/>
-        <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Height="55" Icon="Accept" Label="&#xD;&#xA;" Margin="270,91,0,0" VerticalAlignment="Top" Width="140" Command="{Binding DeleteEventCommand}"/>
+        <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Height="55" Icon="Accept" Label="&#xA;" Margin="270,91,0,0" VerticalAlignment="Top" Width="140" Command="{Binding DeleteEventCommand}"/>
+        <AppBarButton x:Name="appBarButton_Copy" HorizontalAlignment="Left" Height="55" Icon="Accept" Label="&#xA;" Margin="454,91,0,0" VerticalAlignment="Top" Width="140" Click="appBarButton_Copy_Click"/>
 
     </Grid>
 </Page>

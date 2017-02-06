@@ -7,11 +7,14 @@ using EventMaker.Model;
 using EventMaker.Common;
 using EventMaker.Handler;
 using System.ComponentModel;
+using System.Collections.ObjectModel;
 namespace EventMaker.Viewmodel
 {
    public class EventViewModel: INotifyPropertyChanged
     {
         public EventCatalogSingleton Singleton { get; set; }
+     public ObservableCollection<Event> _ObservableCollectionEvent { get { return EventCatalogSingleton.Instance.ObservableCollectionEvent; } }
+       
 
         public int Id { get; set; }
         public string Name { get; set; }
@@ -21,7 +24,7 @@ namespace EventMaker.Viewmodel
         public TimeSpan Time { get; set; }
         public Relaycommand CreateEventCommand { get; set; }
         public Relaycommand DeleteEventCommand { get; set; }
-        private Model.Event selectedEvent;
+     public Model.Event selectedEvent;
 
         public Event SelectedEvent
         {
